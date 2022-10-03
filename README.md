@@ -13,7 +13,7 @@ You will need [Python](https://www.python.org/) with [Django library](https://ww
 • python manage.py makemigrations auctions  
 • python manage.py migrate  
 • python manage.py runserver  
-• python manage.py createsuperuse
+• python manage.py createsuperuser
 ```
 
 ## Urls
