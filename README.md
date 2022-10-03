@@ -12,7 +12,8 @@ You will need [Python](https://www.python.org/) with [Django library](https://ww
 • Clone the package  
 • python manage.py makemigrations auctions  
 • python manage.py migrate  
-• python manage.py runserver
+• python manage.py runserver  
+• python manage.py createsuperuse
 ```
 
 ## Urls
