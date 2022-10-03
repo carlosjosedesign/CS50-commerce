@@ -7,14 +7,16 @@ Design an eBay-like e-commerce auction site that will allow users to post auctio
 
 
 ## Installation
-You will need python with [Django library](https://www.djangoproject.com/)
-• Clone the package
-• python manage.py makemigrations auctions
-• python manage.py migrate
+You will need [Python](https://www.python.org/) with [Django library](https://www.djangoproject.com/)  
+```
+• Clone the package  
+• python manage.py makemigrations auctions  
+• python manage.py migrate  
 • python manage.py runserver
+```
 
 ## Urls
-Front-end: /
+Front-end: /  
 Back-end: /admin
 
 ## Specification
