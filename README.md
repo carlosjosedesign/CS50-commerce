@@ -6,6 +6,17 @@ CS50’s [Web Programming with Python and JavaScript](https://cs50.harvard.edu/w
 Design an eBay-like e-commerce auction site that will allow users to post auction listings, place bids on listings, comment on those listings, and add listings to a “watchlist.”
 
 
+## Installation
+You will need python with [Django library](https://www.djangoproject.com/)
+• Clone the package
+• python manage.py makemigrations auctions
+• python manage.py migrate
+• python manage.py runserver
+
+## Urls
+Front-end: /
+Back-end: /admin
+
 ## Specification
 Complete the implementation of your auction site. You must fulfill the following requirements:
 - [ ] Models: Your application should have at least three models in addition to the User model: one for auction listings, one for bids, and one for comments made on auction listings. It’s up to you to decide what fields each model should have, and what the types of those fields should be. You may have additional models if you would like.
