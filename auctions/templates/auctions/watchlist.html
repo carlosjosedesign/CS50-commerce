@@ -1,0 +1,35 @@
+{% extends "auctions/layout.html" %}
+
+{% block pageTitle %}
+    Your Watchlist
+{% endblock %}
+
+{% block body %}
+    {% if listings %}
+        <div class="row mx-3 justify-content-center pt-4">
+        {%  for listing in listings %}
+            <div class="listing-card card mx-3 mb-4" style="width: 18rem;">
+                <a href="{% url 'listing' id=listing.id %}" class="card-img">
+                    <img class="card-img-top" src="{{ listing.imageUrl }}" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                <p class="mb-1">
+					{% if listing.isActive %}
+						<span class="badge badge-success">Open</span>
+					{% else %}
+						<span class="badge badge-danger">Closed</span>
+					{% endif %}
+				</p>
+                <h3 class="card-title">{{ listing.title }}</h3>
+                <p class="card-text">{{ listing.description }}</p>
+                <a href="{% url 'listing' id=listing.id %}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        {%  endfor %}
+        </div>
+
+    {%  else %}
+        <h3 class="text-center">You don't have itens in watchlist yet</h3>
+    {%  endif %}
+
+{% endblock %}

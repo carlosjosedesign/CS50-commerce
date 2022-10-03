@@ -1,0 +1,65 @@
+{% extends "auctions/layout.html" %}
+
+{% block pageTitle %}
+    My Auctions
+{% endblock %}
+
+{% block body %}
+
+    {% if listings %}
+		<h2 class="text-center">Current auctions</h2>
+        <div class="row mx-3 justify-content-center pt-4">
+        {%  for listing in listings %}
+            <div class="listing-card card mx-3 mb-4" style="width: 18rem;">
+                <a href="{% url 'listing' id=listing.id %}" class="card-img">
+                    <img class="card-img-top" src="{{ listing.imageUrl }}" alt="Card image cap">
+                </a>
+                <div class="card-body">
+				<p class="mb-1">
+					{% if listing.isActive %}
+						<span class="badge badge-success">Open</span>
+					{% else %}
+						<span class="badge badge-danger">Closed</span>
+					{% endif %}
+
+					{% if not listing.isActive and user == listing.price.user %}
+						<span class="badge badge-success">Winner</span>
+					{% endif %}
+				</p>
+                <h3 class="card-title">{{ listing.title }} ${{ listing.price.bid }}</h3>
+                <a href="{% url 'listing' id=listing.id %}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        {%  endfor %}
+        </div>
+
+    {%  else %}
+        <h3 class="text-center">You don't have auctions yet</h3>
+    {%  endif %}
+
+	{% if ownAuctions %}
+		<h2 class="text-center mt-4">My own auctions</h2>
+        <div class="row mx-3 justify-content-center pt-4">
+        {%  for listing in ownAuctions %}
+            <div class="listing-card card mx-3 mb-4" style="width: 18rem;">
+                <a href="{% url 'listing' id=listing.id %}" class="card-img">
+                    <img class="card-img-top" src="{{ listing.imageUrl }}" alt="Card image cap">
+                </a>
+                <div class="card-body">
+				<p class="mb-1">
+					{% if listing.isActive %}
+						<span class="badge badge-success">Open</span>
+					{% else %}
+						<span class="badge badge-danger">Closed</span>
+					{% endif %}
+				</p>
+                <h3 class="card-title">{{ listing.title }} ${{ listing.price.bid }}</h3>
+                <a href="{% url 'listing' id=listing.id %}" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        {%  endfor %}
+        </div>
+    {%  endif %}
+
+
+{% endblock %}
