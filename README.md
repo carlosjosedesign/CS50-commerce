@@ -5,10 +5,10 @@ CS50’s [Web Programming with Python and JavaScript](https://cs50.harvard.edu/w
 ## Project description
 Design an eBay-like e-commerce auction site that will allow users to post auction listings, place bids on listings, comment on those listings, and add listings to a “watchlist.”
 
-![Home](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/home.png)
-![Listing](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/listing.png)
-![Create](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/create.png)
-![Auctions](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/auctions.png)
+![Home](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/home.png?raw=true)
+![Listing](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/listing.png?raw=true)
+![Create](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/create.png?raw=true)
+![Auctions](https://github.com/carlosjosedesign/CS50-commerce/blob/main/prints/auctions.png?raw=true)
 
 
 ## Installation
